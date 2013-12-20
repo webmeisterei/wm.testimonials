@@ -1,0 +1,44 @@
+
+<dl class="portlet portletTestimonial"
+    i18n:domain="wm.testimonials">
+
+    <dt class="portletHeader titleless">
+        <span class="portletTopLeft"></span>
+        <span>
+            <tal:comment replace="nothing">
+                taken from plone.portlet.static
+                maybe not useful here
+            </tal:comment>
+        </span>
+        <span class="portletTopRight"></span>
+    </dt>
+
+
+    <dd class="portletItem odd">
+        
+        hallo 
+
+        <div tal:define="testimonials view/getTestimonials">
+            
+            <div tal:repeat="testimonial testimonials"> 
+                <span tal:content="structure testimonial/text">I really like wm.testimonial because it's so simple<br/>yet powerful</span>
+                
+                <span tal:content="testimonial/name">Max Mustermann</span> | <span tal:content="testimonial/role">CEO</span>
+                
+                <span tal:condition="testimonial/link">
+                <a href="#" tal:attributes="href testimonial/link">read more</a>
+                </span>
+                
+                <img tal:replace="structure testimonial/img/@@images/image/mini" />
+            </div>
+            
+        </div>
+        
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+        
+    </dd>
+    
+    
+
+</dl>

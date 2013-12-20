@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<import-steps>
+ <import-step id="wm.testimonials-various" version="20130821-01"
+              handler="wm.testimonials.setuphandlers.importVarious"
+              title="Create and configure statement folder">
+
+ <dependency step="content" />
+  Testimonial Setup
+ </import-step>
+</import-steps>
