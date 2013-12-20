@@ -43,3 +43,8 @@ Categorize Statements by using Keywords
 Portlet can display a single statement, a random statement out of all available
 statements or a random statement with a certain subject
 
+
+TODOS:
+* support multiple views on the portlet as collectionmultiview portlet does.
+* implement single testimonial and subject filtered testimonials
+

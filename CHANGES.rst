@@ -5,3 +5,7 @@ Changelog
 --------------------
 
 - Package created using templer [Harald Friessnegger]
+
+- setup routine that adds a testimonial folder
+
+- portlet that lists available tesimonials
