@@ -9,3 +9,7 @@ Changelog
 - setup routine that adds a testimonial folder
 
 - portlet that lists available tesimonials
+
+- basic styling for the portlet
+
+- use jquerytools scrollable to show multiple statements
