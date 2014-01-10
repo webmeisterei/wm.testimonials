@@ -24,6 +24,9 @@ def customSetupRoutine(portal):
     the unittest, we added this method.
     """
     
+    if FOLDER_ID in portal.objectIds():
+        return
+    
     _createObjectByType('Folder', portal, id=FOLDER_ID, title=u"Testimonials")
     folder = portal.unrestrictedTraverse(FOLDER_ID)
     folder._md['excludeFromNav'] = True

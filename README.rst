@@ -17,7 +17,9 @@ Testimonials are no extra content type - we use Images
 
 
 Title
-  Name and role of the person. eg: `Scott Tiger, CEO`
+  Name and role of the person. eg: `Scott Tiger | CEO`
+
+  (Hint: use ``|`` to separate name from role)
 
 Description
   The statement text

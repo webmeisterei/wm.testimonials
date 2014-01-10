@@ -1,0 +1,55 @@
+
+
+
+
+/* @group setup for jquerytools scrollable
+ * see http://jquerytools.org/demos/scrollable/index.html
+ *  
+ */
+
+
+.testimonials {
+  position:relative;
+  overflow:hidden;
+  width: 470px;
+  height:230px;
+}
+
+.testimonials .items {
+  /* this cannot be too large */
+  width:20000em;
+  position:absolute;
+}
+
+.testimonials div.testimonial {
+  float:left;
+}
+
+
+
+
+/* navigation */
+
+.portletTestimonial {
+	position:relative;
+}
+
+.portletTestimonial a.browse {
+	position:absolute;
+	top:100px;
+	cursor:pointer;
+}
+
+.portletTestimonial a.browse.right {
+	right:0;
+}
+.portletTestimonial a.browse.left {
+	left:0;
+}	
+
+.portletTestimonial a.disabled {
+    visibility:hidden !important;
+}
+
+
+/* @end */

@@ -16,23 +16,41 @@
 
     <dd class="portletItem odd">
         
-        hallo 
+        
 
-        <div tal:define="testimonials view/getTestimonials">
+        <div tal:define="testimonials view/getTestimonials" class="testimonials">
             
-            <div tal:repeat="testimonial testimonials"> 
-                <span tal:content="structure testimonial/text">I really like wm.testimonial because it's so simple<br/>yet powerful</span>
+          <div class="items">
+              
+            <div tal:repeat="testimonial testimonials" class="testimonial">
                 
-                <span tal:content="testimonial/name">Max Mustermann</span> | <span tal:content="testimonial/role">CEO</span>
-                
-                <span tal:condition="testimonial/link">
-                <a href="#" tal:attributes="href testimonial/link">read more</a>
+                <div class="text"> 
+                <span class="quote" tal:content="structure testimonial/text">I really like wm.testimonial because it's so simple<br/>yet powerful</span>
+                <br/>
+                <span class="quoteBy">
+                (<span class="person" tal:content="testimonial/name">Max Mustermann</span> | <span class="role" tal:content="testimonial/role">CEO</span>)
                 </span>
                 
-                <img tal:replace="structure testimonial/img/@@images/image/mini" />
+                <span class="morelink" tal:condition="testimonial/link">
+                <a href="#" tal:attributes="href testimonial/link">mehr lesen</a>
+                </span>
+                
+                </div>
+
+                
+                <div class="image">
+                  <img tal:replace="structure testimonial/img/@@images/image/testimonial" />
+                </div>
+                                
+  
+                <div class="visualClear"></div>
             </div>
             
+          </div>  
         </div>
+        
+        <a class="prev browse left">&larr;</a>
+        <a class="next browse right">&rarr;</a>
         
         <span class="portletBottomLeft"></span>
         <span class="portletBottomRight"></span>
