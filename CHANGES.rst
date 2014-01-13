@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0a1 (2013-02-13)
+1.0a1 (2013-01-13)
 ------------------
 
 - Package created using templer [Harald Friessnegger]
