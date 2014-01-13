@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.0-dev (unreleased)
---------------------
+1.0a1 (2013-02-13)
+------------------
 
 - Package created using templer [Harald Friessnegger]
 
