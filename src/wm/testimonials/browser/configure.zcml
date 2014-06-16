@@ -1,12 +1,20 @@
 <configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="wm.testimonials">
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="wm.testimonials">
 
-    <browser:resource name="wm.testimonials.js"
-        file="testimonials.js" />
+  <browser:resource
+    name="wm.testimonials.js"
+    file="testimonials.js" />
 
-    <browser:resource name="wm.testimonials.css"
-        file="testimonials.css" />
-                                
+  <browser:resource
+    name="wm.testimonials.css"
+    file="testimonials.css" />
+
+  <browser:page
+    for="*"
+    name="testimonials"
+    class=".TestimonialsView"
+    permission="zope2.View" />
+
 </configure>

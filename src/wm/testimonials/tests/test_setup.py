@@ -16,6 +16,8 @@ class TestExample(unittest.TestCase):
         self.portal = self.layer['portal']
         self.qi_tool = getToolByName(self.portal, 'portal_quickinstaller')
 
+
+
     def test_product_is_installed(self):
         """ Validate that our products GS profile has been run and the product
             installed
@@ -25,5 +27,5 @@ class TestExample(unittest.TestCase):
         self.assertTrue(pid in installed,
                         'package appears not to have been installed')
 
-        
-        sefl.assertTrue(FOLDER_ID in self.portal.objectIds(), 'Testimonials folder has not been created')
+
+        self.assertTrue(FOLDER_ID in self.portal.objectIds(), 'Testimonials folder has not been created')

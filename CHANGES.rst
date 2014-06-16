@@ -1,6 +1,14 @@
 Changelog
 =========
 
+dev
+---
+
+- @@testimonials view can be used to obtain testimonials
+
+- use utils.testimonial2Dict to get the same dictionary
+  representation as the @@testimonials view returns
+
 1.0a1 (2013-01-13)
 ------------------
 

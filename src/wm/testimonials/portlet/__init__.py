@@ -23,9 +23,9 @@ class ITestimonialPortlet(IPortletDataProvider):
     """
 
     #category - show all of a category
-    
+
     #testimonial - show single testimonial
-    
+
 
 
 class Assignment(base.Assignment):
@@ -53,8 +53,8 @@ class Assignment(base.Assignment):
         if self.testimonial:
             return u"Testimonial %s" % self.testimonial.UID()
         return u"Random testimonial"
-    
-        
+
+
 
 class Renderer(base.Renderer):
     """Portlet renderer.
@@ -69,38 +69,40 @@ class Renderer(base.Renderer):
 
     @property
     def testimonialFolder(self):
-        return getTestimonialFolder(self.context)
-        
-        
+        return getTestimonialFolder(context)
+
+
 
     def getTestimonials(self):
-        
+
         if self.data.testimonial:
             return [self.data.testimonial]
-        
+
+        #TODO: use @@testimonials.testimonials here
+
         query = {}
-        
+
         if self.data.category:
             query['Subject'] = self.data.category
-            
+
         if self.testimonialFolder is None:
             return []
-        
-        result = []
-        
 
-        
+        result = []
+
+
+
         for item in self.testimonialFolder.listFolderContents(query):
             if '|' in item.Title():
                 name, role = item.Title().split('|')
             else:
                 name = item.Title()
                 role = u''
-            
+
             link = None
             if item.getRelatedItems():
                 link = item.getRelatedItems()[0].absolute_url()
-                
+
             result.append(dict(name=name.strip(),
                                role=role.strip(),
                                text = item.Description().replace('\n', '<br/>'),
@@ -108,7 +110,7 @@ class Renderer(base.Renderer):
                                img = item,
                                ))
         return result
-        
+
 
 # NOTE: If this portlet does not have any configurable parameters, you can
 # inherit from NullAddForm and remove the form_fields variable.
