@@ -1,8 +1,8 @@
 Changelog
 =========
 
-dev
----
+1.0a2 (2014-06-23)
+------------------
 
 - @@testimonials view can be used to obtain testimonials
 
